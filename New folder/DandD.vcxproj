@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{04A298E8-3933-4BC6-AEC4-E4B89B712562}</ProjectGuid>
+    <RootNamespace>DandD</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)Deps/include/SDL;$(SolutionDir)Deps/include/CPP UNIT/include/;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Deps/lib/SDL/;$(SolutionDir)Deps/lib/CPP UNIT/;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_mixer.lib;SDL2_ttf.lib;SDL2_image.lib;cppunit.lib;cppunit_dll.lib;TestRunner.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AddUserMadeItemsConfMenu.cpp" />
+    <ClCompile Include="AggressorStrategy.cpp" />
+    <ClCompile Include="Armor.cpp" />
+    <ClCompile Include="Belt.cpp" />
+    <ClCompile Include="Boots.cpp" />
+    <ClCompile Include="campaignselect.cpp" />
+    <ClCompile Include="CharacterController.cpp" />
+    <ClCompile Include="CharacterCreateEditMenu.cpp" />
+    <ClCompile Include="CharacterManager.cpp" />
+    <ClCompile Include="CharacterObserver.cpp" />
+    <ClCompile Include="Characters.cpp" />
+    <ClCompile Include="CharacterSaveManager.cpp" />
+    <ClCompile Include="CharacterSaveMap.cpp" />
+    <ClCompile Include="CharBuilder.cpp" />
+    <ClCompile Include="Container.cpp" />
+    <ClCompile Include="ContainerGenerator.cpp" />
+    <ClCompile Include="Corpse.cpp" />
+    <ClCompile Include="DeleteCharacterMenu.cpp" />
+    <ClCompile Include="Dice.cpp" />
+    <ClCompile Include="DiceController.cpp" />
+    <ClCompile Include="DisplayPlayerStatsWindow.cpp" />
+    <ClCompile Include="EditCharacterMenu.cpp" />
+    <ClCompile Include="EditRaceMenu.cpp" />
+    <ClCompile Include="Enhancement.cpp" />
+    <ClCompile Include="Fighter.cpp" />
+    <ClCompile Include="FighterOnMapView.cpp" />
+    <ClCompile Include="FighterTest.cpp" />
+    <ClCompile Include="FriendlyStrategy.cpp" />
+    <ClCompile Include="GameController.cpp" />
+    <ClCompile Include="GameLog.cpp" />
+    <ClCompile Include="GameLogMenu.cpp" />
+    <ClCompile Include="gameplayengine.cpp" />
+    <ClCompile Include="Helmet.cpp" />
+    <ClCompile Include="HumanPlayerStrategy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ItemCreator.cpp" />
+    <ClCompile Include="ItemFactory.cpp" />
+    <ClCompile Include="ItemMenus.cpp" />
+    <ClCompile Include="LevelObserver.cpp" />
+    <ClCompile Include="LoadCharacterMenu.cpp" />
+    <ClCompile Include="mainmenu.cpp" />
+    <ClCompile Include="campaignmanager.cpp" />
+    <ClCompile Include="campaignMAPmanager.cpp" />
+    <ClCompile Include="defaultmaps.cpp" />
+    <ClCompile Include="environment.cpp" />
+    <ClCompile Include="fileIOmanager.cpp" />
+    <ClCompile Include="game_components.cpp" />
+    <ClCompile Include="game_loops.cpp" />
+    <ClCompile Include="image.cpp" />
+    <ClCompile Include="levels.cpp" />
+    <ClCompile Include="levelwindow.cpp" />
+    <ClCompile Include="filepathandfoldermanager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MapController.cpp" />
+    <ClCompile Include="mapeditorengine.cpp" />
+    <ClCompile Include="MapObserver.cpp" />
+    <ClCompile Include="MapTest.cpp" />
+    <ClCompile Include="menuengine.cpp" />
+    <ClCompile Include="menus.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="MonsterFactory.cpp" />
+    <ClCompile Include="MonsterOnMapView.cpp" />
+    <ClCompile Include="MovementStrategy.cpp" />
+    <ClCompile Include="Observer.cpp" />
+    <ClCompile Include="red_green_blue.cpp" />
+    <ClCompile Include="Ring.cpp" />
+    <ClCompile Include="routing.cpp" />
+    <ClCompile Include="SaveOverConfirmationMenu.cpp" />
+    <ClCompile Include="Shield.cpp" />
+    <ClCompile Include="Sound.cpp" />
+    <ClCompile Include="LogViewMenu.cpp" />
+    <ClCompile Include="Subject.cpp" />
+    <ClCompile Include="SuccessOnNameChangeMenu.cpp" />
+    <ClCompile Include="SuccessOnRaceChangeMenu.cpp" />
+    <ClCompile Include="TestDice.cpp" />
+    <ClCompile Include="TestFighterStrategy.cpp" />
+    <ClCompile Include="TestItem.cpp" />
+    <ClCompile Include="TestMonsterStrategy.cpp" />
+    <ClCompile Include="ToggleLogMenu.cpp" />
+    <ClCompile Include="userinputandstringmanager.cpp" />
+    <ClCompile Include="textbasedwindow.cpp" />
+    <ClCompile Include="prebuiltlevel.cpp" />
+    <ClCompile Include="sdl_initialize.cpp" />
+    <ClCompile Include="text.cpp" />
+    <ClCompile Include="leveleditor.cpp" />
+    <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="windows.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddUserMadeItemsConfMenu.h" />
+    <ClInclude Include="AggressorStrategy.h" />
+    <ClInclude Include="Armor.h" />
+    <ClInclude Include="Belt.h" />
+    <ClInclude Include="Boots.h" />
+    <ClInclude Include="campaignselect.h" />
+    <ClInclude Include="CharacterController.h" />
+    <ClInclude Include="CharacterCreateEditMenu.h" />
+    <ClInclude Include="CharacterManager.h" />
+    <ClInclude Include="CharacterObserver.h" />
+    <ClInclude Include="Characters.h" />
+    <ClInclude Include="CharacterSaveMap.h" />
+    <ClInclude Include="CharBuilder.h" />
+    <ClInclude Include="CharSaveManager.h" />
+    <ClInclude Include="Container.h" />
+    <ClInclude Include="ContainerGenerator.h" />
+    <ClInclude Include="containerOnMap.h" />
+    <ClInclude Include="Corpse.h" />
+    <ClInclude Include="DeleteCharacterMenu.h" />
+    <ClInclude Include="Dice.h" />
+    <ClInclude Include="DiceController.h" />
+    <ClInclude Include="DisplayPlayerStatsWindow.h" />
+    <ClInclude Include="Dwarf.h" />
+    <ClInclude Include="EditCharacterMenu.h" />
+    <ClInclude Include="EditRaceMenu.h" />
+    <ClInclude Include="enemyonmap.h" />
+    <ClInclude Include="Enhancement.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Fighter.h" />
+    <ClInclude Include="FighterOnMapView.h" />
+    <ClInclude Include="FriendlyStrategy.h" />
+    <ClInclude Include="GameController.h" />
+    <ClInclude Include="GameLog.h" />
+    <ClInclude Include="GameLogMenu.h" />
+    <ClInclude Include="GameLogTest.h" />
+    <ClInclude Include="gameplayengine.h" />
+    <ClInclude Include="Helmet.h" />
+    <ClInclude Include="HumanPlayerStrategy.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemCreator.h" />
+    <ClInclude Include="ItemFactory.h" />
+    <ClInclude Include="ItemMenus.h" />
+    <ClInclude Include="LevelObserver.h" />
+    <ClInclude Include="LoadCharacterMenu.h" />
+    <ClInclude Include="LogViewMenu.h" />
+    <ClInclude Include="mainmenu.h" />
+    <ClInclude Include="campaignmanager.h" />
+    <ClInclude Include="campaignmenus.h" />
+    <ClInclude Include="defaultmaps.h" />
+    <ClInclude Include="environment.h" />
+    <ClInclude Include="game_components.h" />
+    <ClInclude Include="game_loops.h" />
+    <ClInclude Include="image.h" />
+    <ClInclude Include="fileIOmanager.h" />
+    <ClInclude Include="levels.h" />
+    <ClInclude Include="levelwindow.h" />
+    <ClInclude Include="filepathandfoldermanager.h" />
+    <ClInclude Include="MapController.h" />
+    <ClInclude Include="mapeditorengine.h" />
+    <ClInclude Include="campaignMAPmanagers.h" />
+    <ClInclude Include="MapObserver.h" />
+    <ClInclude Include="menuengine.h" />
+    <ClInclude Include="menus.h" />
+    <ClInclude Include="Monster.h" />
+    <ClInclude Include="MonsterCreator.h" />
+    <ClInclude Include="MonsterFactory.h" />
+    <ClInclude Include="MonsterOnMapView.h" />
+    <ClInclude Include="MovementStrategy.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="namespaces.h" />
+    <ClInclude Include="Observer.h" />
+    <ClInclude Include="Ring.h" />
+    <ClInclude Include="routing.h" />
+    <ClInclude Include="SaveOverConfirmationMenu.h" />
+    <ClInclude Include="Shield.h" />
+    <ClInclude Include="Sound.h" />
+    <ClInclude Include="Subject.h" />
+    <ClInclude Include="SuccessOnNameChangeMenu.h" />
+    <ClInclude Include="SuccessOnRaceChangeMenu.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="ToggleLogMenu.h" />
+    <ClInclude Include="userinputandstringmanager.h" />
+    <ClInclude Include="textbasedwindow.h" />
+    <ClInclude Include="prebuiltlevel.h" />
+    <ClInclude Include="sdl_initialize.h" />
+    <ClInclude Include="text.h" />
+    <ClInclude Include="leveleditor.h" />
+    <ClInclude Include="Weapon.h" />
+    <ClInclude Include="windows.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="afx.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
